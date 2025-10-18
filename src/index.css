@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Pixel Art Font */
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Custom Pixel Button Style */
+.pixel-button {
+  border: none;
+  position: relative;
+  cursor: pointer;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  box-shadow: 
+    inset -2px -2px 0px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.2),
+    0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.pixel-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    inset -2px -2px 0px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.3),
+    0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pixel-button:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset -1px -1px 0px rgba(0, 0, 0, 0.2),
+    inset 1px 1px 0px rgba(255, 255, 255, 0.2),
+    0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Card Style */
+.pixel-card {
+  box-shadow: 
+    0px 8px 24px rgba(0, 0, 0, 0.12),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Character Animation */
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus styles for accessibility */
+.pixel-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .pixel-text {
+    font-size: clamp(1rem, 4vw, 2rem);
+  }
+}
