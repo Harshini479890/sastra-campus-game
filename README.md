@@ -31,10 +31,6 @@ A full-stack pixel-art style campus navigation and interaction game built using 
 - Python
 - Scikit-learn models (`club_encoder.pkl`, `club_recommender.pkl`)
 
----
-
-## 🖥️ Getting Started
-
 ### 1. Clone the repo
 
 ```bash
